@@ -19,6 +19,11 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  
+  <!-- THEME STYLES -->
+  <!-- <link href="./static/css/layout.min.css" rel="stylesheet" type="text/css"/> -->
+  
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -70,6 +75,31 @@
                   </span>
                   <span>Paper</span>
                 </a>
+				</span>
+				
+				<!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=IEESns3WAZU"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+			  
+			  <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://polarhs.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data(coming soon)</span>
+                  </a>
+				</span>
+				<!-- Supp Mat. -->
+				<span class="link-block">
 				<a href="https://ivlab.cse.lsu.edu/pub/iccv_21_polarHS_supp.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -78,19 +108,7 @@
                   <span>Supplementary Material</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              
             </div>
-
           </div>
         </div>
       </div>
@@ -101,47 +119,133 @@
 <section class="section">
   <div class="container is-max-desktop">
 	
-	<!-- Under Construction. -->
+	<!-- Abstract. -->
 	<div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Page Under Construction</h2>
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">Abstract</h2>
+		<hr>
+		<video id="teaser" autoplay muted loop height="100%">
+        <source src="static/videos/teaser.mp4"
+                type="video/mp4">
+		</video>
+		
+		<div class="content has-text-justified">
+          <p>
+            In this paper, we present the polarimetric Helmholtz stereopsis (polar-HS), which extends the classical Helmholtz stereopsis by considering the polarization state of light in the reciprocal paths. With the additional phase information from polarization, polar-HS requires only one reciprocal image pair. We formulate new reciprocity and diffuse/specular polarimetric constraints to recover surface depths and normals using an optimization framework. Using a hardware prototype, we show that our approach produces high-quality 3D reconstruction for different types of surfaces, ranging from diffuse to highly specular.
+          </p>
+        </div>
         
       </div>
     </div>
-	<!--/ Under Construction. -->
+	<!--/ Abstract. -->
 	
-    <!-- Abstract. -->
-   <!--  <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Helmholtz stereopsis (HS) exploits the reciprocity principle of light propagation 
-			(i.e., the Helmholtz reciprocity) for 3D reconstruction of surfaces with arbitrary reflectance. 
-          </p>
-          <p>
-            We present the polarimetric Helmholtz stereopsis (polar-HS), which extends the classical HS by considering the polarization state of light in the reciprocal paths. With the additional phase information from polarization, polar-HS requires only one reciprocal image pair. We formulate new reciprocity and diffuse/specular polarimetric constraints to recover surface depths and normals using an optimization framework. Using a hardware prototype, we show that our approach produces high-quality 3D reconstruction for different types of surfaces, ranging from diffuse to highly specular.
-          </p>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
+   
   </div>
 </section>
 
+<section>
+<div class="container is-max-desktop">	
+	<!-- Reconstructions. -->
+	<div class="columns is-centered has-text-centered">
+		<div class="column is-five-fifths">
+			<h2 class="title is-3">3D Reconstruction Results</h2>
+			<hr>
+		</div>
+    </div>
+</div>
+<div class="hero-body">
+	<div class="container  is-max-desktop">
+	<div class="column is-five-fifths">
+		<div id="results-carousel" class="carousel results-carousel">
+			<div class="item item-orange">
+				<video poster="" id="orange" autoplay muted loop height="360px" width="360px">
+				<source src="static/videos/orange.mp4"
+					type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-soap">
+				<video poster="" id="soap" autoplay muted loop height="360px" width="360px">
+				<source src="static/videos/soap.mp4"
+					type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-rubber_dragon">
+				<video poster="" id="rubber_dragon" autoplay muted loop height="360px" width="360px">
+				<source src="static/videos/rubber_dragon.mp4"
+					type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-plant">
+				<video poster="" id="plant" autoplay muted loop height="360px" width="360px">
+				<source src="static/videos/plant.mp4"
+					type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-old_bunny">
+				<video poster="" id="old_bunny" autoplay muted loop height="360px" width="360px">
+					<source src="static/videos/old_bunny.mp4"
+						type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-urchin">
+				<video poster="" id="urchin" autoplay muted loop height="360px" width="360px">
+					<source src="static/videos/urchin.mp4"
+						type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-apple">
+				<video poster="" id="apple" autoplay muted loop height="360px" width="360px">
+					<source src="static/videos/apple.mp4"
+						type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-conch">
+				<video poster="" id="conch" autoplay muted loop height="360px" width="360px">
+					<source src="static/videos/conch.mp4"
+						type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-egg">
+				<video poster="" id="egg" autoplay muted loop height="360px" width="360px">
+					<source src="static/videos/egg.mp4"
+						type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-cat">
+				<video poster="" id="cat" autoplay muted loop height="360px" width="360px">
+					<source src="static/videos/cat.mp4"
+						type="video/mp4">
+				</video>
+			</div>
+			<div class="item item-football">
+				<video poster="" id="football" autoplay muted loop height="360px" width="360px">
+					<source src="static/videos/football.mp4"
+						type="video/mp4">
+				</video>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>					
+	<!--/ Reconstructions. --> 
+</section>
 
+<section class="section">
+	<div class="container is-max-desktop">	
+	<!-- Decomposition. -->
+	<div class="columns is-centered has-text-centered">
+		<div class="column is-five-fifths">
+			<h2 class="title is-3">Polarimetric Image Decomposition</h2>
+			<hr>
+			<img src="static/images/polar_separation_2.jpg"
+              class="interpolation-image"
+              alt="Polarimetric Image Decomposition."/>
+		
+		</div>
+    </div>
+	<!--/ Decomposition. --> 
+  </div>
+</section>
 
 
 <section class="section" id="BibTeX">
@@ -160,12 +264,6 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="https://ivlab.cse.lsu.edu/pub/iccv_21_polarHS.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
